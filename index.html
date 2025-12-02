@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="top-bar">
+        <h1>Weather App</h1>
+        <button id="themeToggle" class="btn-secondary">Dark mode</button>
+    </header>
+
+    <main class="container">
+        <div class="controls">
+            <div class="search">
+                <input id="cityInput" placeholder="Enter a city..." />
+                <button id="searchBtn" class="btn-primary">Search</button>
+                <button id="geoBtn" class="btn-secondary">Use My Location</button>
+            </div>
+            <div id="autocomplete" class="autocomplete hidden"></div>
+
+            <p id="loading" class="loading hidden">Loading...</p>
+        </div>
+
+        <section class="current-section">
+            <h2 id="location"></h2>
+            <div id="currentWeather"></div>
+        </section>
+
+        <section class="forecast-section">
+            <div id="forecast"></div>
+        </section>
+
+        <section class="hourly-section">
+            <h3>Hourly Forecast (Next 24 Hours)</h3>
+            <canvas id="hourlyChart"></canvas>
+        </section>
+    </main>
+
+    <!-- Chart.js for the hourly temperature chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
